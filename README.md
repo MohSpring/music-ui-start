@@ -34,6 +34,7 @@ module com.github.akramov.common {
     opens com.github.akramov.common to javafx.base;
     exports com.github.akramov.common;
 }    
+// otherwise named package
 module com.github.akramov.bd {
     requires sqlite.jdbc;
     requires java.sql;
