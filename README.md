@@ -26,3 +26,19 @@ module music.ui.start {
 the packages names will be `com.github.mohSpring.common` , `com.github.mohSpring.db`, `com.github.mohSpring.ui`
 4. create the projects and add the right dependencies to the `Project structure`
 5. add the descriptor file to each module
+    ####`com.github.mohSpring.common`:
+    ````java
+    module com.github.akramov.common {
+        requires javafx.controls;
+        requires javafx.fxml;
+        requires java.sql;
+        requires sqlite.jdbc;
+    
+        exports controller to javafx.graphics, javafx.fxml;
+        opens controller to javafx.fxml;
+        opens com.github.akramov.common to javafx.base;
+    
+    }
+    ````
+       
+ 
